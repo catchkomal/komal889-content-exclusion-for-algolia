@@ -329,7 +329,7 @@ function se_save_settings() {
         se_algolia_delete_objects( $ids_to_delete );
     }
 
-    wp_redirect( add_query_arg( [ 'page' => 'search-exclude', 'updated' => '1' ], admin_url( 'options-general.php' ) ) );
+    wp_safe_redirect( add_query_arg( [ 'page' => 'search-exclude', 'updated' => '1' ], admin_url( 'options-general.php' ) ) );
     exit;
 }
 
