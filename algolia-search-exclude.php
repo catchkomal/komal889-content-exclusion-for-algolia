@@ -188,7 +188,7 @@ function se_ajax_search_posts() {
     check_ajax_referer( 'se_ajax', 'nonce' );
     if ( ! current_user_can( 'manage_options' ) ) wp_send_json_error( 'Forbidden', 403 );
 
-    $term = sanitize_text_field( $_GET['term'] ?? '' );
+    $term = sanitize_text_field( wp_unslash($_GET['term'] ?? '' ));
     $type = sanitize_key( $_GET['post_type'] ?? 'any' );
 
     $args = [ 'post_status' => 'publish', 'posts_per_page' => 20, 'orderby' => 'title', 'order' => 'ASC' ];
