@@ -1,4 +1,4 @@
-=== Algolia Search Exclude ===
+=== Komal889 Content Exclusion for Algolia ===
 Contributors: komal889
 Tags: algolia, search, exclude, filter, custom search
 Requires at least: 5.8
